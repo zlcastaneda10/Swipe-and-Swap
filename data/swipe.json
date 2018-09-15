@@ -1,0 +1,42 @@
+[
+{
+	"descripccion": "Capa poncho gris",
+	"tipo": "Ropa",
+	"talla": "S",
+	"p-minimo": 80000,
+	"p-maximo": 90000,
+	"foto": null
+},
+{
+	"descripccion": "Abrigo MANGO",
+	"tipo": "Ropa",
+	"talla": "S",
+	"p-minimo": 80000,
+	"p-maximo": 100000,
+	"foto": null
+},
+{
+	"descripccion": "Botines BERSHKA Talla: 39",
+	"tipo": "Zapatos",
+	"talla": "39",
+	"p-minimo": 80000,
+	"p-maximo": 80000,
+	"foto": null
+},
+{
+	"descripccion": "Vestido color palo de rosa.Una sola postura. Tela: Piel de durazno. (Personas de 1,60m de estatura, contextura delgada)",
+	"tipo": "Ropa",
+	"talla": "S",
+	"p-minimo": 50000,
+	"p-maximo": 60000,
+	"foto": null
+},
+{
+	"descripccion": "Chaqueta vintage oversized",
+	"tipo": "Ropa",
+	"talla": "S",
+	"p-minimo": 50000,
+	"p-maximo": 60000,
+	"foto": null
+}
+]
