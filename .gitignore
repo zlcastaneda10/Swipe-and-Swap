@@ -72,3 +72,5 @@ typings/
 # Serverless directories
 .serverless
 .eslintrc.js
+front/package-lock.json
+package-lock.json
