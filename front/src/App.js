@@ -67,6 +67,7 @@ class App extends Component {
                 <li>Hermoso abrigo, muy comodo y suave casi no lo utilizo.</li>
                 <li>Talla: S</li>
                 <li>Tipo: Ropa</li>
+                <li>camiloooo</li>
               </ul>
               
               
