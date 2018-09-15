@@ -44,53 +44,35 @@ class App extends Component {
   renderObjetos() {
     return this.state.objetos.map((obj) =>
       //<Objeto objeto = {obj} />
-      <div key={obj.descripccion}>{obj.tipo} - {obj.descripccion}</div>
+      <Card key={obj.descripccion}>
+        <h1>{obj.titulo}</h1>
+        <img src={obj.foto}></img>
+        <p>
+          <ul>
+            <li> {obj.descripccion}</li>
+            <li>Talla: {obj.talla}</li>
+            <li>Tipo: {obj.tipo}</li>
+            <li></li>
+          </ul>
+        </p>
+       
+      </Card>
+      
     );
   }
   render() {
     const wrapperStyle = {
-      backgroundColor: "#024773"
-    }
+      backgroundColor: '#024773'
+    };
     
     const cardStyle = {
-      backgroundColor: "#059FFF"
-    }
+      backgroundColor: '#059FFF'
+    };
     return (
       <div className='App'>
         <h1>Swipe&Swap</h1>
-        <CardWrapper>
-          <Card>
-            <h2>Abrigo MNG</h2>
-            <img src="https://bit.ly/2xfiqV7"></img>
-            <p>
-              <ul>
-                <li>Hermoso abrigo, muy comodo y suave casi no lo utilizo.</li>
-                <li>Talla: S</li>
-                <li>Tipo: Ropa</li>
-                <li>camiloooo</li>
-              </ul>
-              
-              
-              
-
-            </p>
-            
-            
-            
-
-          
-         
-          </Card>
-          <Card>
-            <h2>ola</h2>
-          </Card>
-          <Card>
-            <h2>k ase</h2>
-          </Card>
-        </CardWrapper>
-       
-
-        {this.renderObjetos()}
+        <CardWrapper>{this.renderObjetos()}</CardWrapper>
+        
       </div>
     );
   }
