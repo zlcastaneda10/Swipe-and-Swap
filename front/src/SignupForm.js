@@ -36,7 +36,7 @@ class SignUp extends Component {
     if (obj && obj.token) {
       const { token } = obj;
       // Verify token
-      fetch('/api/account/verify?token=' + token)
+      fetch('/api/verify?token=' + token)
         .then(res => res.json())
         .then(json => {
           if (json.success) {
@@ -133,7 +133,7 @@ class SignUp extends Component {
     });
 
     // Post request to backend
-    fetch('/api/account/signin', {
+    fetch('/api/signin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -171,7 +171,7 @@ class SignUp extends Component {
     if (obj && obj.token) {
       const { token } = obj;
       // Verify token
-      fetch('/api/account/logout?token=' + token)
+      fetch('/api/logout?token=' + token)
         .then(res => res.json())
         .then(json => {
           if (json.success) {
