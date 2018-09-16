@@ -115,6 +115,7 @@ class SignIn extends Component {
             token: json.token,
           });
           localStorage.setItem('token', json.token);
+          localStorage.setItem('user', json.email);
           window.location.assign('/cards');
         } else {
           this.setState({

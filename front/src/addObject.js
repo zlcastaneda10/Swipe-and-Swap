@@ -11,9 +11,11 @@ export default class addObject extends Component {
       talla: '',
       pminimo: '',
       pmaximo:'',
-      foto:''
+      foto:'',
+      user: '',
     };
     this.change = this.change.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
     
   change (event) {
@@ -25,6 +27,9 @@ export default class addObject extends Component {
   }
 
   onSubmit = e =>{
+      this.setState({
+        user: localStorage.getItem('user')
+      });
       e.preventDefault();
       //this.props.onSubmit(this.state);
        // Grab state
@@ -35,7 +40,8 @@ export default class addObject extends Component {
           talla,
           pminimo,
           pmaximo,
-          foto
+          foto,
+          user,
       } = this.state;
       
     // Post request to backend
@@ -51,7 +57,8 @@ export default class addObject extends Component {
         talla: talla,
         pminimo : pminimo,
         pmaximo : pmaximo,
-        foto,
+        foto: foto,
+        user: user,
       }),
     }).then(res => res.json())
       .then(json => {
@@ -65,6 +72,7 @@ export default class addObject extends Component {
             pminimo: '',
             pmaximo: '',
             foto: '',
+            user: '',
           });
           window.location.assign('/cards');
         }

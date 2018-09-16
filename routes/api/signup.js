@@ -219,6 +219,9 @@ router.post('/api/addItem', (req, res, next) => {
   let {
     foto
   } = body;
+  let {
+    user
+  } = body;
   console.log('Hey');
   if (!titulo) {
     return res.send({
@@ -233,8 +236,38 @@ router.post('/api/addItem', (req, res, next) => {
       message: 'Error: Descripcion cannot be blank.'
     });
   }
+  if (!tipo) {
+    return res.send({
+      success: false,
+      message: 'Error: tipo cannot be blank.'
+    });
+  }
+  if (!talla) {
+    return res.send({
+      success: false,
+      message: 'Error: talla cannot be blank.'
+    });
+  }
+  if (!pminimo) {
+    return res.send({
+      success: false,
+      message: 'Error: pminimo cannot be blank.'
+    });
+  }
+  if (!pmaximo) {
+    return res.send({
+      success: false,
+      message: 'Error: Descripcion cannot be blank.'
+    });
+  }
+  if (!foto) {
+    return res.send({
+      success: false,
+      message: 'Error: foto cannot be blank.'
+    });
+  }
   titulo = titulo.toLowerCase();
-  descripcion = descripcion.trim();
+  titulo = descripcion.trim();
   // Steps:
   // 1. Verify email doesn't exist
   // 2. Save
@@ -260,6 +293,12 @@ router.post('/api/addItem', (req, res, next) => {
   const newObject = new Object();
   newObject.titulo = titulo;
   newObject.descripcion= descripcion;
+  newObject.tipo = tipo;
+  newObject.talla = talla;
+  newObject.pminimo = pminimo;
+  newObject.pmaximo = pmaximo;
+  newObject.foto = foto;
+  newObject.user = user;
   console.log(newObject.titulo);
   console.log(newObject.descripcion);
   newObject.save((err, user) => {

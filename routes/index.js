@@ -6,7 +6,7 @@ const assert = require('assert');
 
 const findDocuments = function (db, callback) {
   // Get the documents collection
-  const collection = db.collection('objetos');
+  const collection = db.collection('objects');
   // Find some documents
   collection.find({}, {fields: {_id : 0}}
   ).toArray(function (err, docs) {

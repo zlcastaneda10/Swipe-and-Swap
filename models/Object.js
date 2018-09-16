@@ -11,11 +11,11 @@ const ObjectSchema = new mongoose.Schema({
   },
   tipo: {
     type: String,
-    default: 'Ropa'
+    default: ''
   },
   talla:  {
     type: String,
-    default: 'Unica'
+    default: ''
   },
   pminimo:  {
     type: Number,
@@ -27,7 +27,11 @@ const ObjectSchema = new mongoose.Schema({
   },
   foto: {
     type: String,
-    default: 'https://bit.ly/1XAQlMA'
+    default: ''
+  },
+  user: {
+    type: String,
+    default: ''
   }
 });
 
