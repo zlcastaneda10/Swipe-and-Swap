@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import { Card, CardWrapper } from 'react-swipeable-cards';
-import './App.css';
+import '../Cards.css';
 //import Objeto from './Objeto.js';
 
 
-class App extends Component {
+class Cards extends Component {
   constructor(props) {
     super(props);
 
@@ -77,5 +76,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Cards;
 
