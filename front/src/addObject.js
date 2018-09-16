@@ -26,59 +26,56 @@ export default class addObject extends Component {
   onSubmit = e =>{
       e.preventDefault();
       this.props.onSubmit(this.state);
+       // Grab state
+      const {
+          titulo,
+          descripcion,
+          tipo,
+          tall,
+          pminimo,
+          pmaximo,
+          foto
+      } = this.state;
       
-      this.setState({
-        titulo: '',
-        descripcion: '',
-        tipo: '',
-        talla: '',
-        pminimo: '',
-        pmaximo:'',
-        foto:''
-      });
       
-  }
 
-
-  onSignUp() {
-    // Grab state
-    const {
-      signUpEmail,
-      signUpPassword,
-    } = this.state;
-
-    this.setState({
-      isLoading: true,
-    });
-
-    // Post request to backend
-    fetch('/api/signup', {
+       // Post request to backend
+    fetch('/api/addObject', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: signUpEmail,
-        password: signUpPassword,
+          titulo,
+          descripcion,
+          tipo,
+          tall,
+          pminimo,
+          pmaximo,
+          foto
       }),
     }).then(res => res.json())
       .then(json => {
         console.log('json', json);
         if (json.success) {
           this.setState({
-            signUpError: json.message,
-            isLoading: false,
-            signUpEmail: '',
-            signUpPassword: '',
+            titulo: '',
+            descripcion: '',
+            tipo: '',
+            talla: '',
+            pminimo: '',
+            pmaximo:'',
+            foto:''
           });
         } else {
-          this.setState({
-            signUpError: json.message,
-            isLoading: false,
-          });
+          console.log('error en el submit');
+          
         }
       });
+      
   }
+
+
   
   render() {
     return (
