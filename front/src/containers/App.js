@@ -30,8 +30,12 @@ export default class App extends React.Component {
         <div>
           <Navbar color="dark" className="fixed-top navbar-dark bg-dark">
             <NavbarBrand href="/" className="merienda">Swipe & Swap</NavbarBrand>
-		    <Button outline color="danger" onClick={()=>{ localStorage.clear();
-			  window.location = '/';}} className="ml-auto nav_btn">Sign Out</Button>
+	        <Button outline color="danger" onClick={()=>{ localStorage.clear();
+              window.location = '/';}} className="ml-auto nav_btn">Sign Out</Button>
+            <Button outline color="danger" onClick={()=>{ window.location.assign('/cards');}}
+              className="nav_btn">Browse Items</Button>
+            <Button outline color="danger" onClick={()=>{ window.location.assign('/AddObjects');}}
+              className="nav_btn">Add an Item</Button>
           </Navbar>
           <div className="content">
             {this.props.children}

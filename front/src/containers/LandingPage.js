@@ -60,7 +60,6 @@ export default class LandingPage extends Component {
     this.setState({ activeIndex: newIndex });
   }
   render() {
-
     const { activeIndex } = this.state;
 
     const slides = items.map((item) => {
