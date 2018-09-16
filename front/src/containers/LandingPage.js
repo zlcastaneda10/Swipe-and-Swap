@@ -91,6 +91,7 @@ export default class LandingPage extends Component {
             </Container>
           </Jumbotron>
           <Container>
+            <h1 className="merienda">Algunas de nuestras prendas</h1>
             <Carousel
               activeIndex={activeIndex}
               next={this.next}
