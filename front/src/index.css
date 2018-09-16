@@ -42,4 +42,9 @@ body {
   width: 100%;
   color: black;
 }
+  /*Carrusel*/
+.carousel > .carousel-item > img {
+    margin: 0 auto;
+}
+
 
