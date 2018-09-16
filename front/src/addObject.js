@@ -32,20 +32,42 @@ export default class addObject extends Component {
           titulo,
           descripcion,
           tipo,
-          tall,
+          talla,
           pminimo,
           pmaximo,
           foto
       } = this.state;
       
-      this.setState({
-        titulo: '',
-        descripcion: '',
-        tipo: '',
-        talla: '',
-        pminimo: '',
-        pmaximo:'',
-        foto:''
+    // Post request to backend
+    fetch('/api/addItem', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        titulo: titulo,
+        descripcion: descripcion,
+        tipo: tipo,
+        talla: talla,
+        pminimo : pminimo,
+        pmaximo : pmaximo,
+        foto,
+      }),
+    }).then(res => res.json())
+      .then(json => {
+        console.log('json', json);
+        if (json.success) {
+          this.setState({
+            titulo: '',
+            descripcion: '',
+            tipo: '',
+            talla: '',
+            pminimo: '',
+            pmaximo: '',
+            foto: '',
+          });
+          window.location.assign('/cards');
+        }
       });
       
 
@@ -87,10 +109,9 @@ export default class addObject extends Component {
             <input name ="foto" type="text" value={this.state.foto} onChange={this.change} />
           </label>
           <br/>
-          <Button className="nav_btn">
+          <Button className="nav_btn"  onClick={e=>this.onSubmit(e)}>
             Enviar
           </Button>
-          <button  onClick={e=>this.onSubmit(e)}>holi</button> 
         </form>        
       </div>
     );

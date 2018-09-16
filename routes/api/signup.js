@@ -1,6 +1,7 @@
 const User = require('../../models/User');
 var router = require('express').Router();
 const UserSession = require('../../models/UserSession');
+const Object = require('../../models/Object');
 
 /*
    * Sign up
@@ -195,5 +196,84 @@ router.get('/api/verify', (req, res, next) => {
   });
 });
 
-
+router.post('/api/addItem', (req, res, next) => {
+  const { body } = req;
+  let{
+    titulo
+  } = body;
+  let {
+    descripcion
+  } = body;
+  let {
+    tipo
+  } = body;
+  let {
+    talla
+  } = body;
+  let {
+    pminimo
+  } = body;
+  let {
+    pmaximo
+  } = body;
+  let {
+    foto
+  } = body;
+  console.log('Hey');
+  if (!titulo) {
+    return res.send({
+      success: false,
+      message: 'Error: titulo cannot be blank.'
+    });
+  }
+  console.log('waddup');
+  if (!descripcion) {
+    return res.send({
+      success: false,
+      message: 'Error: Descripcion cannot be blank.'
+    });
+  }
+  titulo = titulo.toLowerCase();
+  descripcion = descripcion.trim();
+  // Steps:
+  // 1. Verify email doesn't exist
+  // 2. Save
+  console.log('little');
+  /**
+  User.find({
+    email: email
+  }, (err, previousUsers) => {
+    if (err) {
+      return res.send({
+        success: false,
+        message: 'Error: Server error'
+      });
+    } else if (previousUsers.length > 0) {
+      return res.send({
+        success: false,
+        message: 'Error: Account already exist.'
+      });
+    }
+    */
+  console.log('APP');
+  // Save the new user
+  const newObject = new Object();
+  newObject.titulo = titulo;
+  newObject.descripcion= descripcion;
+  console.log(newObject.titulo);
+  console.log(newObject.descripcion);
+  newObject.save((err, user) => {
+    if (err) {
+      return res.send({
+        success: false,
+        message: 'Error: Server error'
+      });
+    }
+    return res.send({
+      success: true,
+      message: 'Object added'
+    });
+  });
+});
+// end of addItem endpoint
 module.exports = router;
