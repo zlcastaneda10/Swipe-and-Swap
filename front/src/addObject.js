@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Button}  from 'reactstrap';
 
 export default class addObject extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class addObject extends Component {
 
   onSubmit = e =>{
       e.preventDefault();
-      this.props.onSubmit(this.state);
+      //this.props.onSubmit(this.state);
        // Grab state
       const {
           titulo,
@@ -37,42 +38,17 @@ export default class addObject extends Component {
           foto
       } = this.state;
       
-      
-
-       // Post request to backend
-    fetch('/api/addObject', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-          titulo,
-          descripcion,
-          tipo,
-          tall,
-          pminimo,
-          pmaximo,
-          foto
-      }),
-    }).then(res => res.json())
-      .then(json => {
-        console.log('json', json);
-        if (json.success) {
-          this.setState({
-            titulo: '',
-            descripcion: '',
-            tipo: '',
-            talla: '',
-            pminimo: '',
-            pmaximo:'',
-            foto:''
-          });
-        } else {
-          console.log('error en el submit');
-          
-        }
+      this.setState({
+        titulo: '',
+        descripcion: '',
+        tipo: '',
+        talla: '',
+        pminimo: '',
+        pmaximo:'',
+        foto:''
       });
       
+
   }
 
 
@@ -110,8 +86,11 @@ export default class addObject extends Component {
             Imagen:
             <input name ="foto" type="text" value={this.state.foto} onChange={this.change} />
           </label>
-
-          <button onClick={e=>this.onSubmit(e)}>Enviar</button> 
+          <br/>
+          <Button className="nav_btn">
+            Enviar
+          </Button>
+          <button  onClick={e=>this.onSubmit(e)}>holi</button> 
         </form>        
       </div>
     );
