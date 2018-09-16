@@ -25,22 +25,7 @@ class Cards extends Component {
 
     this.state = {
       objetos: [
-        {
-          'descripccion': 'Abrigo MANGO',
-          'tipo': 'Ropa',
-          'talla': 'S',
-          'p-minimo': 80000,
-          'p-maximo': 100000,
-          'foto': null
-        },
-        {
-          'descripccion': 'Vestido color palo de rosa.Una sola postura. Tela: Piel de durazno. (Personas de 1,60m de estatura, contextura delgada)',
-          'tipo': 'Ropa',
-          'talla': 'S',
-          'p-minimo': 50000,
-          'p-maximo': 60000,
-          'foto': null
-        }
+       
       ]
     };
   }
@@ -71,6 +56,7 @@ class Cards extends Component {
 
   onSwipeRight(obj) {
     alert('Its a Match!!');
+    console.log(obj);
     console.log('I was swiped right.');
   }
 
@@ -92,11 +78,8 @@ class Cards extends Component {
         <ul>
           <li> {obj.descripccion}</li>
           <li>Talla: {obj.talla}</li>
-          <li>Tipo: {obj.tipo}</li>
-          
+          <li>Tipo: {obj.tipo}</li>         
         </ul>
-        
-       
       </Card>
 
     );
