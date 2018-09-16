@@ -28,7 +28,6 @@ class SignIn extends Component {
     this.onTextboxChangeSignUpPassword = this.onTextboxChangeSignUpPassword.bind(this);
     
     this.onSignIn = this.onSignIn.bind(this);
-    this.onSignUp = this.onSignUp.bind(this);
     this.logout = this.logout.bind(this);
   }
 
@@ -82,46 +81,6 @@ class SignIn extends Component {
     });
   }
 
-  onSignUp() {
-    // Grab state
-    const {
-      signUpEmail,
-      signUpPassword,
-    } = this.state;
-
-    this.setState({
-      isLoading: true,
-    });
-
-    // Post request to backend
-    fetch('/api/signup', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: signUpEmail,
-        password: signUpPassword,
-      }),
-    }).then(res => res.json())
-      .then(json => {
-        console.log('json', json);
-        if (json.success) {
-          this.setState({
-            signUpError: json.message,
-            isLoading: false,
-            signUpEmail: '',
-            signUpPassword: '',
-          });
-        } else {
-          this.setState({
-            signUpError: json.message,
-            isLoading: false,
-          });
-        }
-      });
-  }
-
   onSignIn() {
     // Grab state
     const {
@@ -155,6 +114,8 @@ class SignIn extends Component {
             signInEmail: '',
             token: json.token,
           });
+          localStorage.setItem('token', json.token);
+          window.location.assign('/cards');
         } else {
           this.setState({
             signInError: json.message,
@@ -200,9 +161,6 @@ class SignIn extends Component {
       signInError,
       signInEmail,
       signInPassword,
-      signUpEmail,
-      signUpPassword,
-      signUpError,
     } = this.state;
 
     if (isLoading) {
@@ -219,6 +177,9 @@ class SignIn extends Component {
                 <p>{signInError}</p>
               ) : (null)
             }
+            <br/>
+            <br/>
+            <br/>
             <p>Sign In</p>
             <input
               type="email"
@@ -236,30 +197,6 @@ class SignIn extends Component {
             <br />
             <button onClick={this.onSignIn}>Sign In</button>
           </div>
-          <br />
-          <br />
-          <div>
-            {
-              (signUpError) ? (
-                <p>{signUpError}</p>
-              ) : (null)
-            }
-            <p>Sign Up</p>
-            <input
-              type="email"
-              placeholder="Email"
-              value={signUpEmail}
-              onChange={this.onTextboxChangeSignUpEmail}
-            /><br />
-            <input
-              type="password"
-              placeholder="Password"
-              value={signUpPassword}
-              onChange={this.onTextboxChangeSignUpPassword}
-            /><br />
-            <button onClick={this.onSignUp}>Sign Up</button>
-          </div>
-
         </Container>
       );
     }
