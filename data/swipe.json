@@ -7,7 +7,8 @@
 	"pminimo": 80000,
 	"pmaximo": 90000,
 	"foto": "https://bit.ly/2p9IZ9y",
-	"user": "zulma"
+	"user": "zulma",
+	"_v":0
 },
 {
 	"titulo": "Chamarra",
@@ -17,7 +18,8 @@
 	"pminimo": 40000,
 	"pmaximo": 40000,
 	"foto": "https://bit.ly/2xm0siL",
-	"user": "zulma"
+	"user": "zulma",
+	"_v":0
 },
 {
 	"titulo": "Vestido",
@@ -27,7 +29,8 @@
 	"pminimo": 80000,
 	"pmaximo": 100000,
 	"foto": "https://bit.ly/2xg8nhq",
-	"user": "zulma"
+	"user": "zulma",
+	"_v":0
 },
 {
 	"titulo": "Botas Timberland",
@@ -37,7 +40,8 @@
 	"pminimo": 100000,
 	"pmaximo": 140000,
 	"foto": "https://bit.ly/2xgxS32",
-	"user": "zulma"
+	"user": "zulma",
+	"_v":0
 },
 {
 	"titulo": "Abrigo",
@@ -47,6 +51,7 @@
 	"pminimo": 80000,
 	"pmaximo": 80000,
 	"foto": "https://bit.ly/2pbB3os",
-	"user": "zulma"
+	"user": "zulma",
+	"_v":0
 }
 ]

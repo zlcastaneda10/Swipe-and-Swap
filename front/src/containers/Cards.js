@@ -68,7 +68,7 @@ class Cards extends Component {
   renderObjetos() {
     return this.state.objetos.map((obj) =>
       //<Objeto objeto = {obj} />
-      <Card key={obj.descripccion} onSwipe={this.onSwipe.bind(this)}
+      <Card key={obj.foto} onSwipe={this.onSwipe.bind(this)}
         onSwipeLeft={this.onSwipeLeft.bind(this)}
         onSwipeRight={this.onSwipeRight.bind(this)}
         onDoubleTap={this.onDoubleTap.bind(this)}>
