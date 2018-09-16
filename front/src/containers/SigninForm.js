@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-import {Container } from 'reactstrap';
+import {Container} from 'reactstrap';
 
 import {
   getFromStorage,
@@ -212,7 +212,7 @@ class SignIn extends Component {
     if (!token) {  
       return (
         
-        <div>
+        <Container>
           <div>
             {
               (signInError) ? (
@@ -260,7 +260,7 @@ class SignIn extends Component {
             <button onClick={this.onSignUp}>Sign Up</button>
           </div>
 
-        </div>
+        </Container>
       );
     }
 
