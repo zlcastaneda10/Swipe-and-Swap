@@ -4,13 +4,18 @@ body {
   font-family: sans-serif;
 }
 
-.merienda{
-  font-family: 'Merienda One', cursive;
+.carousel-item img{
+  width: 100% !important;
 }
 
-.MIT{
-  width: 80px;
-  height: 20px;
+.carousel-caption{
+  color: black; 
+  background-color: aliceblue;
+  opacity: 0.7;
+}
+
+.merienda{
+  font-family: 'Merienda One', cursive;
 }
 
 /* Navbar */
@@ -43,8 +48,22 @@ body {
   color: black;
 }
   /*Carrusel*/
-.carousel > .carousel-item > img {
-    margin: 0 auto;
-}
-
+  .slider {
+    /* line them up horizontally */
+    display: flex;
+  
+    /* allow for scrolling */
+    overflow-x: auto;
+  
+    /* make it smooth on iOS */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+  .slider > div {
+    /* make sure the width is honored */
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+  }
 

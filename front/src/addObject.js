@@ -80,9 +80,7 @@ export default class addObject extends Component {
       
 
   }
-
-
-  
+ 
   render() {
     return (
       <div>

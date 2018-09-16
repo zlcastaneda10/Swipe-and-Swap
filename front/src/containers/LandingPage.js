@@ -7,19 +7,19 @@ import {Jumbotron, Button, Container, Carousel,
 
 const items = [
   {
-    src: 'https://bit.ly/2p9IZ9y',
-    altText: 'Blusa ELA',
-    caption: 'Hermosa'
+    src: 'https://bit.ly/2NPY1iG',
+    altText: 'Sweater',
+    caption: 'Acogedor y calentito',
   },
   {
-    src: 'https://bit.ly/2xg8nhq',
-    altText: 'Vestido Largo',
-    caption: '1 postura'
+    src: 'https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    altText: 'Jeans',
+    caption: 'Me los regalaron y no me quedan'
   },
   {
-    src: 'https://bit.ly/2pbB3os',
-    altText: 'Chaqueta Azul',
-    caption: 'Chaqueta Azul'
+    src: 'https://images.pexels.com/photos/325867/pexels-photo-325867.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    altText: 'Pantuflas de bebe',
+    caption: 'Sin estrenar'
   }
 ];
 
@@ -70,39 +70,41 @@ export default class LandingPage extends Component {
           key={item.src}
         >
           <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption captionText={item.caption} captionHeader={item.altText} />
         </CarouselItem>
       );
     });
 
     return (
       <div>
-        <div>
-          <Jumbotron className="home_header_img">
-            <Container >
-              <h1 className="display-3 merienda">Swipe, Match & Swap</h1>
-              <p className="lead">Renueva tu guardaropa intercambiando prendas con otros miembros de la comunidad</p>
-              <hr className="my-2" />
-              <p>¿Que estas esperando? Grandes tesoros te esperan.</p>           
-              <p className="lead">
-                <Button onClick={()=>{window.location = '/signUp';}} className="nav_btn">Sign Up</Button>
-              </p>
-            </Container>
-          </Jumbotron>
-          <Container>
-            <h1 className="merienda">Algunas de nuestras prendas</h1>
-            <Carousel
-              activeIndex={activeIndex}
-              next={this.next}
-              previous={this.previous}
-            >
-              <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-              {slides}
-              <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-              <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-            </Carousel>
+        
+        <Jumbotron className="home_header_img">
+          <Container >
+            <h1 className="display-3 merienda">Swipe, Match & Swap</h1>
+            <p className="lead">Renueva tu guardaropa intercambiando prendas con otros miembros de la comunidad</p>
+            <hr className="my-2" />
+            <p>¿Que estas esperando? Grandes tesoros aguardan.</p>           
+            <p className="lead">
+              <Button onClick={()=>{window.location = '/signUp';}} className="nav_btn">Sign Up</Button>
+            </p>
           </Container>
-        </div>
+        </Jumbotron>
+        <Container>
+          <h1 className="merienda">Algunas de nuestras prendas</h1>
+          <Carousel
+            activeIndex={activeIndex}
+            next={this.next}
+            previous={this.previous}
+          >
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+            {slides}
+            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+          </Carousel>
+
+         
+        </Container>
+        
       </div>
     );
   }
