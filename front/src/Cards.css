@@ -115,6 +115,31 @@ html {
  }
 
 
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 10px 10px;
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+.titulo_carta{
+  padding-top: 15px;
+}
+.emoji{
+  font-size: 7em;
+  padding: 20px;
+}
+
+.end{
+  padding: 40px;
+}
+
+/*Cosas de react*/
 .App {
   text-align: center;
 }
@@ -143,3 +168,4 @@ html {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
