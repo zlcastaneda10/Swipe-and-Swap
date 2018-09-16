@@ -47,14 +47,14 @@ class App extends Component {
       <Card key={obj.descripccion}>
         <h1>{obj.titulo}</h1>
         <img src={obj.foto}></img>
-        <p>
-          <ul>
-            <li> {obj.descripccion}</li>
-            <li>Talla: {obj.talla}</li>
-            <li>Tipo: {obj.tipo}</li>
-            <li></li>
-          </ul>
-        </p>
+        
+        <ul>
+          <li> {obj.descripccion}</li>
+          <li>Talla: {obj.talla}</li>
+          <li>Tipo: {obj.tipo}</li>
+          <li></li>
+        </ul>
+        
        
       </Card>
       
@@ -71,8 +71,7 @@ class App extends Component {
     return (
       <div className='App'>
         <h1>Swipe&Swap</h1>
-        <CardWrapper>{this.renderObjetos()}</CardWrapper>
-        
+        <CardWrapper>{this.renderObjetos()}</CardWrapper>       
       </div>
     );
   }
