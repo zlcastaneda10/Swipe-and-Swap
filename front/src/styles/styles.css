@@ -13,10 +13,6 @@ a:hover {
     outline: none;
 }
 
-* {
-  color: #89959B;
-  font-weight: 600;
-}
 
 input {
   color: #33373D;
@@ -26,32 +22,6 @@ input {
   height: 50px;
   text-align: center;
   font-size: 20px !important;
-}
-
-.btn {
-  background-color: #db0011 !important;
-  color: white !important;
-  border: 0px !important;
-  border-radius: 3px !important;
-  font-weight: 600 !important;
-}
-
-.inner_btn {
-  height: 50px;
-  width: 100px;
-  padding: 12px !important;
-  border-radius: 5px !important;
-  font-size: 18px !important;
-}
-
-/* Navbar */
-.nav_btn {
-	margin-right: 10px;
-}
-
-.navbar_logo {
-  width: 170px;
-  height: 23.266px;
 }
 
 /* Footer */
@@ -83,14 +53,7 @@ footer {
 	margin-top: 55px;
 }
 
-/* Home */
-.home_header_img {
-	background: url("https://bit.ly/2Nf3wrZ");
-  background-size:cover;
-	height: 600px;
-	padding-top: 200px;
-	width: 100%;
-}
+
 
 .home_header_logo {
 	margin-bottom: 20px;

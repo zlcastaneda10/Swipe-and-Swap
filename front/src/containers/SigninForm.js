@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
+import {Container } from 'reactstrap';
 
 import {
   getFromStorage,
@@ -208,8 +209,9 @@ class SignIn extends Component {
       return (<div><p>Loading...</p></div>);
     }
 
-    if (!token) {
+    if (!token) {  
       return (
+        
         <div>
           <div>
             {
