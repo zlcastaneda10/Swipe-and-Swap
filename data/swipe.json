@@ -6,7 +6,8 @@
 	"talla": "L",
 	"pminimo": 80000,
 	"pmaximo": 90000,
-	"foto": "https://bit.ly/2p9IZ9y"
+	"foto": "https://bit.ly/2p9IZ9y",
+	"user": "zulma"
 },
 {
 	"titulo": "Chamarra",
@@ -15,7 +16,8 @@
 	"talla": "L",
 	"pminimo": 40000,
 	"pmaximo": 40000,
-	"foto": "https://bit.ly/2xm0siL"
+	"foto": "https://bit.ly/2xm0siL",
+	"user": "zulma"
 },
 {
 	"titulo": "Vestido",
@@ -24,7 +26,8 @@
 	"talla": "L",
 	"pminimo": 80000,
 	"pmaximo": 100000,
-	"foto": "https://bit.ly/2xg8nhq"
+	"foto": "https://bit.ly/2xg8nhq",
+	"user": "zulma"
 },
 {
 	"titulo": "Botas Timberland",
@@ -33,15 +36,17 @@
 	"talla": "36",
 	"pminimo": 100000,
 	"pmaximo": 140000,
-	"foto": "https://bit.ly/2xgxS32"
+	"foto": "https://bit.ly/2xgxS32",
+	"user": "zulma"
 },
 {
 	"titulo": "Abrigo",
-	"descripccion": "Blusa en perfecto estado, con muy poco uso",
+	"descripccion": "Hermoso abrigo azul, muy buen estado y calidad.",
 	"tipo": "Ropa",
 	"talla": "XL",
 	"pminimo": 80000,
 	"pmaximo": 80000,
-	"foto": "https://bit.ly/2pbB3os"
+	"foto": "https://bit.ly/2pbB3os",
+	"user": "zulma"
 }
 ]
