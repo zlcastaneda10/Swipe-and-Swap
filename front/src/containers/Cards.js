@@ -26,7 +26,8 @@ class Cards extends Component {
     this.state = {
       objetos: [
        
-      ]
+      ],
+      actual: -1
     };
   }
 
@@ -45,20 +46,27 @@ class Cards extends Component {
       .catch((err) => console.log(err));
 
   }
+  onSwipeRight(obj) {
+    let objActual = this.state.objetos[this.state.actual];
+    alert('Its a Match!! Please contact '+objActual.user);
+    console.log(this.state.objetos[this.state.actual]);
+    
+    console.log('I was swiped right.');
+  }
 
   onSwipe(obj) {
     console.log('I was swiped.');
+    let cont = this.state.actual+1;
+    console.log(cont);
+    this.setState({actual:cont});
+    
   }
 
   onSwipeLeft(obj) {
     console.log('I was swiped left.');
   }
 
-  onSwipeRight(obj) {
-    alert('Its a Match!!');
-    console.log(obj);
-    console.log('I was swiped right.');
-  }
+  
 
   onDoubleTap(obj) {
     console.log('I was double tapped.');
@@ -68,9 +76,10 @@ class Cards extends Component {
   renderObjetos() {
     return this.state.objetos.map((obj) =>
       //<Objeto objeto = {obj} />
-      <Card key={obj.foto} onSwipe={this.onSwipe.bind(this)}
-        onSwipeLeft={this.onSwipeLeft.bind(this)}
+      <Card key={obj.foto} 
         onSwipeRight={this.onSwipeRight.bind(this)}
+        onSwipe={this.onSwipe.bind(this)}
+        onSwipeLeft={this.onSwipeLeft.bind(this)}
         onDoubleTap={this.onDoubleTap.bind(this)}>
         <h1 className="merienda titulo_carta">{obj.titulo}</h1>
         <img src={obj.foto}></img>

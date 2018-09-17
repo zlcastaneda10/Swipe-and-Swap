@@ -1,9 +1,14 @@
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+.MIT{
+  width: 80px;
+  height: 20px;
+}
 .carousel-item img{
   width: 100% !important;
 }

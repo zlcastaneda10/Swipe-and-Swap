@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
-import {Container} from 'reactstrap';
+import {Container, Button} from 'reactstrap';
 
 import {
   getFromStorage,
@@ -197,7 +197,7 @@ class SignIn extends Component {
               onChange={this.onTextboxChangeSignInPassword}
             />
             <br />
-            <button onClick={this.onSignIn}>Sign In</button>
+            <Button className='nav_btn'  onClick={this.onSignIn}>Sign In</Button>
           </div>
         </Container>
       );
@@ -206,7 +206,7 @@ class SignIn extends Component {
     return (
       <div>
         <p>Account</p>
-        <button onClick={this.logout}>Logout</button>
+        <Button  className='nav_btn' onClick={this.logout}>Logout</Button>
       </div>
     );
   }
