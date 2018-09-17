@@ -2,8 +2,13 @@
   "name": "swipe",
   "version": "0.0.0",
   "private": true,
+  "engines":{
+    "node": "8.12.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd front && npm install && npm run build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -15,5 +20,7 @@
     "mongoose": "^5.2.14",
     "morgan": "~1.9.0",
     "whatwg-fetch": "^3.0.0"
-  }
+  },
+  "main": "index.js"
+  
 }
