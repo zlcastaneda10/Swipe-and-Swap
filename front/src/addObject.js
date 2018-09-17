@@ -17,7 +17,11 @@ export default class addObject extends Component {
     this.change = this.change.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
-    
+  componentDidMount(){
+    this.setState({
+      user: localStorage.getItem('user')
+    });
+  }  
   change (event) {
     const target = event.target;
     const value = target.value;
@@ -27,9 +31,6 @@ export default class addObject extends Component {
   }
 
   onSubmit = e =>{
-      this.setState({
-        user: localStorage.getItem('user')
-      });
       e.preventDefault();
       //this.props.onSubmit(this.state);
        // Grab state

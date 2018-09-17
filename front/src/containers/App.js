@@ -8,6 +8,7 @@ import '../styles/styles.css';
 
 export default class App extends React.Component {
   render() {
+    console.log(localStorage.getItem('user'));
     if(!localStorage.getItem('token')) {
       return (
         <div>
