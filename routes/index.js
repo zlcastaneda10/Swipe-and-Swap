@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
+require('dotenv').config();
 //const Object = require('../../models/Object');
 
 const findDocuments = function (db, callback) {
@@ -20,10 +21,10 @@ const findDocuments = function (db, callback) {
 function getObjetos(callback) {
 
   // Connection URL
-  const url = 'mongodb://localhost:27017';
+  const url = process.env.MONGODB_URI;
 
   // Database Name
-  const dbName = 'swipe';
+  const dbName = process.env.DB_NAME;
 
   // Use connect method to connect to the server
   MongoClient.connect(url, function (err, client) {
