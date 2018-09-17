@@ -165,10 +165,7 @@ class SignUp extends Component {
 
     if (!token) {
       return (
-        <div>
-          <div>
-
-          </div>
+        <Container>
           <br />
           <br />
           <div>
@@ -193,7 +190,7 @@ class SignUp extends Component {
             <Button className='nav_btn' onClick={this.onSignUp}>Sign Up</Button>
           </div>
 
-        </div>
+        </Container>
       );
     }
 
