@@ -8,10 +8,30 @@ Once downloaded, get in the root folder of the App and install all dependencies 
 `
 npm install
 `
+
+Then run
+`
+npm start
+`
+
+No we are starting the client
+`
+cd /frontdenuncias
+`
+
+run 
+`
+yarn install
+`
+`
+yarn start
+`
 Prepare the data by running the following commands
 
 `
 cd data/
+`
+`
 mongoimport -d swipe -c objetos --jsonArray --file swipe.json
 `
 ## Technologies used
