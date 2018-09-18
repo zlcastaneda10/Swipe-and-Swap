@@ -16,7 +16,7 @@ npm start
 
 No we are starting the client
 `
-cd /frontdenuncias
+cd /cliente
 `
 
 run 
