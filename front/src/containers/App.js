@@ -1,3 +1,5 @@
+//Deberían usar strict en los archivos de javascript
+"use strict";
 import React from 'react';
 import {
   Navbar,
