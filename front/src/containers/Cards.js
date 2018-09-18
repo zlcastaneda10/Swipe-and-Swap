@@ -18,7 +18,7 @@ class MyEndCard extends Component {
     );
   }
 }
-
+// I think to look it more organize separate each class with a different file. and its export which i think is giving trouble
 class Cards extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +37,7 @@ class Cards extends Component {
     );
   }
 
+    //fetch shouldnt it be api/getData? if not then it hink it will make it better putting it
   componentDidMount() {
     fetch('/getData')
       .then((res) => {
