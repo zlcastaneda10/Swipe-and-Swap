@@ -37,7 +37,7 @@ Prepare the data by running the following commands
 cd data/
 `
 `
-mongoimport -d swipe -c objetos --jsonArray --file swipe.json
+mongoimport -d swipe -c objects --jsonArray --file swipe.json
 `
 ## Technologies used
 For the development of the page, the technologies used were:
