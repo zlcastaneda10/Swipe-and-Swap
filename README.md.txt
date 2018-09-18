@@ -1,3 +1,4 @@
+//Rafael Cardenas: Eliminar este archivo del cual no se está haciendo uso.
 # Sweep&Swap
 
 Sweep&Swap will allow people to trade their items. We wanted to give a boost to circular econonomies focusing on a responsible consumption and the exchange of stuff you do not need.
