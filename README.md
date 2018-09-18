@@ -1,5 +1,5 @@
 # Swipe-and-Swap
-Sweep&Swap will allow people to trade their items. We wanted to give a boost to circular econonomies focusing on a responsible consumption and the exchange of stuff you do not need. You can access the page from this link:
+Swipe&Swap will allow people to trade their items. We wanted to give a boost to circular econonomies focusing on a responsible consumption and the exchange of stuff you do not need. You can access the page from this link:
 
 https://cryptic-island-55895.herokuapp.com/
 
