@@ -54,7 +54,7 @@ For the development of the page, the technologies used were:
 ## Screenshot 
 Here is a screenshot of the page
 
-<img src="https://scontent.fbog5-1.fna.fbcdn.net/v/t1.0-9/42058682_2703594596332628_6176660698228064256_n.jpg?_nc_cat=0&oh=301c608f14ef5679ded0809beda0aa00&oe=5C249BF7" alt="Smiley face" height="200" width="200">
+<img src="https://i.imgur.com/85kABky.png" alt="Smiley face" height="200" width="200">
 
 ## Authors
 The web page was created by Zulma Castañeda and Juan Camilo Useche.
